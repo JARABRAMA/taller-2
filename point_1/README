@@ -1,0 +1,14 @@
+1. Se tienen dos listas simplemente ligas A y B, de longitud
+diferente, cada una almacena las edades del grupo 10 y del
+grupo 11 de un colegio. Realice un algoritmo que permitagenerar una lista C simplemente ligada con registro cabeza,
+que:
+a. En su cabeza tenga el dato promedio de la edad de los
+estudiantes
+b. La lista C es una lista con las edades de todos los
+estudiantes, que se forma de manera ordenada de
+menor a mayor.
+c. Utilice para la conformación de la lista C, al menos dos
+métodos de ordenamiento.
+d. Demuestre mediante programación, cuál de los
+métodos de ordenamiento es más lento.
+e. Implemente al menos dos pruebas de escritorio.

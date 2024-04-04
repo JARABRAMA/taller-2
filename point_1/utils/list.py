@@ -31,6 +31,7 @@ class SLL:
         node = SN(data)
         if self.size == 0:
             self.set_first(node)
+            self.set_last(node)
         else:
             self.get_last().set_next(node)
             self.set_last(node)

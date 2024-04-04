@@ -61,12 +61,20 @@ class SLL:
 # head simple link list 
 class HSL:
     def __init__(self, arr: list = None) -> None:
-        self._head = SN(0)
+        self._head = SN("x")
         self._last = self.get_head()
         self.size = 0
         if arr is not None:
             for i in range(len(arr)):
                 self.append(arr[i])
+
+    def set_average(self):
+        sum: int = 0
+        node = self.get_first()
+        while node is not None:
+            sum += node.get_data()
+            node = node.get_next()
+        self.get_head().set_data(sum / self.size)
 
     def append(self, data):
         node = SN(data)
@@ -77,6 +85,7 @@ class HSL:
             self.get_last().set_next(node)
             self.set_last(node)
         self.size += 1
+        self.set_average()
 
     def to_str(self) -> str:
         result: str = ""
@@ -84,6 +93,7 @@ class HSL:
         while node is not None:
             result += f'{node.get_data()} -> '
             node = node.get_next()
+        result += f'\naverage: {self.get_head().get_data()}\nsize: {self.size}'
         return result
 
     def get_head(self):

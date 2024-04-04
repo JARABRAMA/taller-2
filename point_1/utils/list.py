@@ -59,7 +59,7 @@ class SLL:
 
 
 # head simple link list 
-class LNC:
+class HSL:
     def __init__(self, arr: list = None) -> None:
         self._head = SN(0)
         self._last = self.get_head()
@@ -76,6 +76,7 @@ class LNC:
         else:
             self.get_last().set_next(node)
             self.set_last(node)
+        self.size += 1
 
     def to_str(self) -> str:
         result: str = ""

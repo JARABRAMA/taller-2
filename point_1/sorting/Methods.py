@@ -59,3 +59,25 @@ class Sorters:
                         arr[i + 1] = temp
             i = i - 1
         return arr
+
+    @staticmethod
+    def shaker_sort(arr: list[int]) -> list[int]:
+        i: int = len(arr) // 2  # this method only need the middle of the length of the list to sort it
+        swap: bool = True
+        init: int = 0
+        final: int = len(arr) - 1
+        while i > - 1 and swap:
+            swap = False
+            for j in range(init, final):
+                if arr[j] > arr[j + 1]:
+                    arr[j], arr[j + 1] = arr[j + 1], arr[j]
+                    swap = True
+            final -= 1
+
+            for j in range(final, init, -1):
+                if arr[j] < arr[j - 1]:
+                    arr[j], arr[j - 1] = arr[j - 1], arr[j]
+                    swap = True
+
+            init += 1
+        return arr

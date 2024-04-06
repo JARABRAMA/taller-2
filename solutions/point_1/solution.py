@@ -1,5 +1,5 @@
-from point_1.utils.list import SLL, SN, HSL
-from point_1.sorting.methods import Sorters
+from utils.list import SLL, SN, HSL
+from sorting.methods import Sorters
 
 
 def twolist_toarr(ls1: SLL, ls2: SLL) -> list:

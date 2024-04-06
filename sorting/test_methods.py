@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from point_1.sorting.methods import Sorters
+from sorting.methods import Sorters
 
 
 class TestSorters(TestCase):

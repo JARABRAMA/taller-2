@@ -1,6 +1,6 @@
 from unittest import TestCase
 
-from point_1.utils.list import SLL
+from utils.list import SLL
 
 
 class Test(TestCase):

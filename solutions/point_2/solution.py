@@ -1,7 +1,8 @@
 from sorting.methods import Sorters
+from utils.list import SLL
 
 
-def mode(arr: list[int]) -> int:
+def get_mode(arr: list[int]) -> int:
     matrix = [[] for _ in range(len(arr))]
     Sorters.selection_sort(arr)
     element: int = arr[0]
@@ -19,5 +20,26 @@ def mode(arr: list[int]) -> int:
     return matrix[mayor][0]
 
 
-ls = [1, 1, 1, 2, 2, 3, 5, 5]
-print(mode(ls))
+def solution_insertion(arr: list[int], mode: int):
+    result = []
+    for i in range(len(arr)):
+        if arr[i] < mode:
+            result.append(arr[i])
+    return SLL(Sorters.insertion_sort(result))
+
+
+def solution_shaker(arr: list[int], mode: int):
+    result = []
+    for i in range(len(arr)):
+        if arr[i] < mode:
+            result.append(arr[i])
+    return SLL(Sorters.shaker_sort(result))
+
+
+ls = [1, 1, 1, 2, 2, 3, 4, 4, 4, 4, 4, 5, 5, 6]
+mode = get_mode(ls)
+print(f'mode: {mode}\n')
+print("solution by insertion")
+print(solution_insertion(ls, mode).to_str())
+print('\nsolution by shaker')
+print(solution_shaker(ls, mode).to_str())

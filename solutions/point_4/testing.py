@@ -1,6 +1,6 @@
 from solutions.point_4.constants import *
 from solutions.point_4.searching import *
-from solutions.point_4.sorting import counting_sort
+from solutions.point_4.sorting import radix_sort
 
 if __name__ == '__main__':
     list1 = ExpensesList()
@@ -16,5 +16,5 @@ if __name__ == '__main__':
     print(list1)
 
     print("Sorted list: ")
-    list2 = counting_sort(list1)
+    list2 = radix_sort(list1)
     print(list2)

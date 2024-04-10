@@ -1,6 +1,6 @@
-from solutions.point4.constants import *
-from solutions.point4.searching import *
-from solutions.point4.sorting import counting_sort
+from solutions.point_4.constants import *
+from solutions.point_4.searching import *
+from solutions.point_4.sorting import counting_sort
 
 if __name__ == '__main__':
     list1 = ExpensesList()

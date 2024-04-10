@@ -1,4 +1,4 @@
-from solutions.point4.classes import ExpensesList
+from solutions.point_4.classes import ExpensesList
 
 
 def search_lineal_tipo(lista: ExpensesList, tipo: str) -> ExpensesList:

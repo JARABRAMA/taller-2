@@ -1,7 +1,7 @@
-from solutions.point_4.classes import ExpensesList, ExpensesNode
+from solutions.point_4.classes import ExpensesList, ExpenseNode
 
 
-def to_expenses_list(expenses: list[ExpensesNode]) -> ExpensesList:
+def to_expenses_list(expenses: list[ExpenseNode]) -> ExpensesList:
     result = ExpensesList()  # this method pass from a normal list to a nodal list
     for expense in expenses:
         result.append(expense.get_type(), expense.get_value(), expense.get_date())
@@ -33,7 +33,7 @@ def counting_sort(lista: ExpensesList, exp: int) -> ExpensesList:
 
 def max_key(lista: ExpensesList) -> int:
     greatest = lista.get_first()
-    expense: ExpensesNode = lista.get_first().get_next()
+    expense: ExpenseNode = lista.get_first().get_next()
     while expense is not None:
         if greatest.get_type().get('key') < expense.get_type().get('key'):
             greatest = expense

@@ -1,4 +1,4 @@
-class ExpensesNode:
+class ExpenseNode:
     def __init__(self, type: dict, value: int, date: str):
         self._next = None
         self._type = type
@@ -26,7 +26,7 @@ class ExpensesNode:
 
 class ExpensesList:
     def __init__(self) -> None:
-        self._head = ExpensesNode(dict(), 0, "0/0/0")
+        self._head = ExpenseNode(dict(), 0, "0/0/0")
         self._last = self.get_head()
         self.size = 0
         self.total_value = 0
@@ -40,7 +40,7 @@ class ExpensesList:
         return list_str
 
     def append(self, tipo: dict, value: int, date: str):
-        node = ExpensesNode(tipo, value, date)
+        node = ExpenseNode(tipo, value, date)
         if self.size == 0:
             self.get_head().set_next(node)
             self.set_last(node)
@@ -56,8 +56,8 @@ class ExpensesList:
     def get_last(self):
         return self._last
 
-    def set_last(self, node: ExpensesNode):
+    def set_last(self, node: ExpenseNode):
         self._last = node
 
-    def get_first(self) -> ExpensesNode:
+    def get_first(self) -> ExpenseNode:
         return self.get_head().get_next()

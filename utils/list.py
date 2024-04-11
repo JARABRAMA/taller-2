@@ -17,7 +17,7 @@ class SN:
         self._next = next
 
 
-# simple link list 
+# simple link list1
 class SLL:
     def __init__(self, arr: list = None) -> None:
         self._first = None
@@ -58,7 +58,7 @@ class SLL:
         return result
 
 
-# head simple link list 
+# head simple link list1
 class HSL:
     def __init__(self, arr: list = None) -> None:
         self._head = SN("x")

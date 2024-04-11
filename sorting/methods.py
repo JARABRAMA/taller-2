@@ -46,7 +46,7 @@ class Sorters:
 
     @staticmethod
     def shaker_sort(arr: list[int]) -> list[int]:
-        i: int = len(arr) // 2  # this method only need the middle of the length of the list to sort it
+        i: int = len(arr) // 2  # this method only need the middle of the length of the list1 to sort it
         swap: bool = True
         init: int = 0
         final: int = len(arr) - 1
@@ -65,7 +65,7 @@ class Sorters:
             i -= 1
         return arr
 
-    # the bucket sort only works if the elements of the list to sort are minor than 1 but mayor or equals to cero
+    # the bucket sort only works if the elements of the list1 to sort are minor than 1 but mayor or equals to cero
     @staticmethod
     def bucket_sort(arr: list[float]) -> list[float]:
         bucket = [[] for _ in range(len(arr))]

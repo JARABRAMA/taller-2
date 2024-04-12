@@ -14,5 +14,5 @@ if __name__ == '__main__':
     list1.append(ExpensesType.EDUCATION, 13, "12/12/24")
     list1.append(ExpensesType.EDUCATION, 13, "12/12/24")
 
-    find = binary_search(list1, ExpensesType.EDUCATION, '12/12/24')
+    find = lineal_search(list1, ExpensesType.EDUCATION, '12/12/24')
     print(find)

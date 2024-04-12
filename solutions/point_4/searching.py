@@ -4,11 +4,16 @@ from solutions.point_4.sorting import radix_sort
 
 def lineal_search(lista: ExpensesList, tipo: str, date: str) -> ExpensesList:
     result: ExpensesList = ExpensesList()
-    bills = lista.get_first()
-    while bills is not None:
-        if bills.get_type() == tipo and bills.get_date() == date:
-            result.append(bills.get_type(), bills.get_value(), bills.get_date())
-        bills = bills.get_next()
+    bill = lista.get_first()
+    while bill is not None:
+        bill_type = bill.get_type().get('type')
+        print(f'bill of date {bill.get_date()} and type {bill_type}\n')
+        if bill.get_type() == tipo and bill.get_date() == date:
+            result.append(bill.get_type(), bill.get_value(), bill.get_date())
+            print(f'{bill} is added to the list')
+            print(f'list: \n{result}')
+        bill = bill.get_next()
+        print('\n')
     return result
 
 
